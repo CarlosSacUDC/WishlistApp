@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please add item name", Toast.LENGTH_SHORT).show()
             } else {
                 val priceFloat = priceText.toFloatOrNull() ?: 0f
-                priceText = "%.2f".format(priceFloat)
+                priceText = "$" + "%.2f".format(priceFloat)
 
                 val newItem = Wishlist(nameText, priceText, linkText)
                 ItemList.addItem(newItem)

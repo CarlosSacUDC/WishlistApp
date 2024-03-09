@@ -11,12 +11,12 @@
         android:id="@+id/linkTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:elegantTextHeight="true"
-        android:textSize="18dp"
         android:text="Link: https://www.example.com/page.html"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameTv" />
 
     <TextView
@@ -26,7 +26,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:elegantTextHeight="true"
-        android:textSize="22dp"
+        android:textSize="21dp"
         android:text="9.99"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,7 +38,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:elegantTextHeight="true"
-        android:textSize="22dp"
+        android:textSize="24dp"
         android:text="Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
