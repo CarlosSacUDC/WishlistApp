@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -31,12 +32,18 @@ class MainActivity : AppCompatActivity() {
             val nameText = name.text.toString()
             var priceText = price.text.toString()
             val linkText = link.text.toString()
-            val priceFloat = priceText.toFloatOrNull() ?: 0f
-            priceText = "%.2f".format(priceFloat)
 
-            val newItem = Wishlist(nameText, priceText, linkText)
-            ItemList.addItem(newItem)
-            adapter.notifyDataSetChanged()
+            if (nameText.isBlank()) {
+                Toast.makeText(this, "Please add item name", Toast.LENGTH_SHORT).show()
+            } else {
+                val priceFloat = priceText.toFloatOrNull() ?: 0f
+                priceText = "%.2f".format(priceFloat)
+
+                val newItem = Wishlist(nameText, priceText, linkText)
+                ItemList.addItem(newItem)
+                adapter.notifyDataSetChanged()
+
+            }
 
             name.text.clear()
             price.text.clear()
